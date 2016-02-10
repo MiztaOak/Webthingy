@@ -34,7 +34,7 @@
 
 					<tr>
 						<td>
-							<p>I have read and aproved of the terms and agrements for using this thing</p>
+							<p>I have read and aproved the terms and agrements for creating a account</p>
 							<input type="checkbox" name="Vertified" value="1" required>
 							<br>
 						</td>
