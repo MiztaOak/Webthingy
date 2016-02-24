@@ -1,5 +1,5 @@
 <?php
-	require_once('../mysql_connect_.php');
+	require_once('../mysql_connect/mysql_connect_webgoaty.php');
 
 	$query = 'SELECT * FROM Cities WHERE Population>5000000 ORDER BY Population DESC';
 

@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../mysql_connect_.php');
+require_once('../../mysql_connect/mysql_connect_webgoaty.php');
 
 
 $query = 'INSERT INTO Users(Username,Password,Mail,Vertified)
