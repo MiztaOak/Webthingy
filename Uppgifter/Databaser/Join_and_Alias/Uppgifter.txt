@@ -1,0 +1,12 @@
+1. SELECT c.First_name,c.Last_name,od.Order_number,od.customer_number,od.Order_date,od.Price,od.Extra From orders AS od
+JOIN customers AS c ON c.Customer_number=od.Customer_number;
+2. SELECT p.Product_name,SUM(od.Quantity) FROM Order_details As od JOIN Products AS p ON od.Product_number=p.Product_number GROUP BY od.Product_number;
+3. SELECT CONCAT(c.First_name,' ',c.Last_name) AS Name,od.Order_number,od.Price From orders AS od
+JOIN customers AS c ON c.Customer_number=od.Customer_number;
+4. SELECT od.Order_number,od.Product_number,od.Quantity,CONCAT(c.First_name,' ',c.Last_name) AS Name From order_details AS od
+JOIN customers AS c ON c.Customer_number=od.Customer_number;
+5. SELECT CONCAT(c.First_name,' ',c.Last_name) AS Name,SUM(p.Volume) FROM Orders As od JOIN Products AS p JOIN Customers AS c 
+ON od.Customer_number=c.Customer_number GROUP BY od.Customer_number;
+6. SELECT Product_name,CAST(Alcohol AS Decimal(4,2))/100 AS Alcohol_per_cl FROM Products;
+7. SELECT Product_name,(CAST(Alcohol AS Decimal(4,2))/100)/Price*Volume AS APK FROM Products;
+8. SELECT Product_name,Max((CAST(Alcohol AS Decimal(4,2))/100)/Price*Volume) AS Best_APK FROM Products;
