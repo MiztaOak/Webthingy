@@ -49,6 +49,10 @@
 				</form>
 
 			</table>
+			<br>
+			<a href=login/login.php>
+   				<button>Login</button>
+			</a>
 	</body>
 
 </html>
