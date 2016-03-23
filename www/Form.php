@@ -21,24 +21,10 @@
 					<tr>
 						<td>
 							<p>Password</p><br>
-							<input type="text" name="Password" required>
+							<input type="password" name="Password" required>
 						</td>
 					</tr>
 
-					<tr>
-						<td>
-							<p>Mail</p><br>
-							<input type="text" name="Mail" required>
-						</td>
-					</tr>
-
-					<tr>
-						<td>
-							<p>I have read and aproved the terms and agrements for creating a account</p>
-							<input type="checkbox" name="Vertified" value="1" required>
-							<br>
-						</td>
-					</tr>
 
 					<tr>
 						<td>
@@ -56,3 +42,22 @@
 	</body>
 
 </html>
+
+<?php
+	/*			<tr>
+						<td>
+						<p>Mail</p><br>
+							<input type="text" name="Mail" required>
+					</td>
+				</tr>
+
+					<tr>
+				<td>
+					<p>I have read and aproved the terms and agrements for creating a account</p>
+						<input type="checkbox" name="Vertified" value="1" required>
+						<br>
+						</td>
+					</tr> */
+
+	
+?>
