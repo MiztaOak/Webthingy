@@ -3,7 +3,7 @@
 session_start();
 
 if (!isset($_POST['Username']) AND !isset($_POST['Password'])) {
-	header('Location: ../main_page/index.php?page=login');
+	header('Location: ../index.php?page=login');
 }
 
 require_once('../../../MySQL_Connect/mysql_connect_webgoaty.php');
@@ -18,12 +18,12 @@ $username = mysqli_fetch_array($result);
 if($username['Username'] === $_POST['Username']){
 	$_SESSION['loggedIn'] = TRUE;
 	$_SESSION['timeout'] = time();
-	header('Location: ../main_page/index.php');
+	header('Location: ../index.php');
 }
 
 else{
 	$_SESSION['loggedIn'] = FALSE;
-	header('Location: ../main_page/index.php?page=login');
+	header('Location: ../index.php?page=login');
 }
 
 ?>

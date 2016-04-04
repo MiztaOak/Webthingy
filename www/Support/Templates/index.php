@@ -2,7 +2,7 @@
 
 session_start();
 if(!@$_SESSION['loggedIn']){
-	header('Location: ../main_page/index.php?page=login');
+	header('Location: index.php?page=login');
 }
 if(@$_SESSION['timeout']+ 60*30 < time()){
 	session_destroy();
@@ -25,9 +25,9 @@ echo $meddelande;
 </head>
 <body>
 	<br>
-	<img src="../login/Walrus.jpg">
+	<img src="login/Walrus.jpg">
 	<br>
-	<a href="../login/logout.php">
+	<a href="login/logout.php">
 	<button>Logout</button>
 	</a>
 </body>

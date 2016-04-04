@@ -2,7 +2,7 @@
 	session_start(); 
 
  	if(@$_SESSION['loggedIn']){ 
- 	header('Location: ../templates/index.php');
+ 	header('Location: templates/index.php');
  }
 
 ?>
@@ -17,7 +17,7 @@
 
 			<table>
 				
-				<form action="../login/verification_login.php" method="POST">
+				<form action="login/verification_login.php" method="POST">
 
 					<tr>
 						<td>
@@ -43,7 +43,7 @@
 
 			</table>
 			<br>
-			<a href=../main_page/index.php?page=Form>
+			<a href=../index.php?page=Form>
    				<button>Create a account</button>
 			</a>
 	</body>
