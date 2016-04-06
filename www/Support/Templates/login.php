@@ -1,10 +1,10 @@
 <?php
-	session_start(); 
+	/*session_start(); 
 
  	if(@$_SESSION['loggedIn']){ 
  	header('Location: templates/index.php');
  }
-
+*/
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +43,7 @@
 
 			</table>
 			<br>
-			<a href=../index.php?page=Form>
+			<a href=index.php?page=Form>
    				<button>Create a account</button>
 			</a>
 	</body>

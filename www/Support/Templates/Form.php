@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Acount thingy</title>
-	</head>
-
-	<body>
+		<body>
 			<hi>CREATE ACCOUNT</hi>
 
 			<table>
 				
-				<form action="../Skickad_data_ac/index.php" method="POST">
+				<form action="Skickad_data_ac/index.php" method="POST">
 
 					<tr>
 						<td>
@@ -36,12 +30,11 @@
 
 			</table>
 			<br>
-			<a href=../main_page/index.php?page=login>
+			<a href=index.php?page=login>
    				<button>Login</button>
 			</a>
 	</body>
 
-</html>
 
 <?php
 	/*			<tr>

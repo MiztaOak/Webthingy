@@ -18,6 +18,7 @@ $username = mysqli_fetch_array($result);
 if($username['Username'] === $_POST['Username']){
 	$_SESSION['loggedIn'] = TRUE;
 	$_SESSION['timeout'] = time();
+	$_SESSION['name'] = $_POST['Username'];
 	header('Location: ../index.php');
 }
 

@@ -8,6 +8,6 @@ $query = 'INSERT INTO Users(Username,Password) VALUES("' . $_POST['Username'] . 
 
 mysqli_query($dbc,$query);
 
-header('Location: ../main_page/index.php?page=login');
+header('Location: ../index.php?page=login');
 
 ?>

@@ -9,6 +9,7 @@
 	<head>
 		<title>Support</title>
 		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="shortcut icon" href="templates/favicon.ico" type="image/x-icon" />
 		<meta charset="UTF-8">
 	</head>
 	<body>
@@ -21,7 +22,12 @@
 		<nav>
 			<?php include('templates/nav.php'); ?>
 		</nav>
-
+		
+		<div id="login_bar">
+			<?php include('templates/login_bar.php'); ?>
+		</div>
+		<br>
+		<br>
 		<main>
 			
 			<?php

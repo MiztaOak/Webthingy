@@ -79,7 +79,7 @@ nav{
 	height:40px;
 }
 nav p{
-	width:25%;
+	width:100%;
 	min-width:240px;
 	margin:0px;
 	float:left;
@@ -108,4 +108,28 @@ textarea {
 form{
 	margin:0px auto;
 	width:300px;
+}
+
+#login_bar{
+	position:absolute;
+	float:right;
+	height:40px;
+	padding:0px;
+	font-size:20px;
+	width:100%;
+	font-weight:bold;
+	min-width:1300px;
+	color:white;
+	background-color:#000066; 
+}
+
+#login_bar p{
+	margin-top: 3px;
+	float: right;
+}
+
+#login_bar a{
+	margin-left: 20px;
+	margin-right: 20px;	
+	color: white;
 }
