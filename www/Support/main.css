@@ -72,7 +72,7 @@ footer span{
 	margin:0px auto;
 }
 nav{
-	border-bottom:2px solid black;
+	border-bottom:2px solid white;
 	background:#4973cb;
 	padding:10px;
 	min-width:1300px;
@@ -92,6 +92,9 @@ nav a{
 	font-size:25px;
 	font-weight:bold;
 	margin-left:40px;
+}
+nav a:hover{
+	background-color:#14E1F7;
 }
 header p{
 	margin:0px;

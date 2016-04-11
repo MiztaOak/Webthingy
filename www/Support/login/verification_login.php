@@ -6,9 +6,9 @@ if (!isset($_POST['Username']) AND !isset($_POST['Password'])) {
 	header('Location: ../index.php?page=login');
 }
 
-require_once('../../../MySQL_Connect/mysql_connect_webgoaty.php');
+require_once('../../../MySQL_Connect/mysql_connect_support.php');
 
-$query = 'SELECT Username, Password FROM users WHERE Password=PASSWORD("' . $_POST['Password'] . '") AND Username="' . $_POST['Username'] . '";';
+$query = 'SELECT u.Username, p.Password FROM Users As u JOIN Password AS p ON p.Password=PASSWORD("' . $_POST['Password'] . '") AND u.Username="' . $_POST['Username'] . '";';
 
 $result = mysqli_query($dbc,$query);
 

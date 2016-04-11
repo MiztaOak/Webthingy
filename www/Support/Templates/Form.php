@@ -11,7 +11,24 @@
 							<input type="text" name="Username" required>
 						</td>
 					</tr>
-
+					<tr>
+						<td>
+							<p>Email</p><br>
+							<input type="text" name="Email" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>First name</p><br>
+							<input type="text" name="First_Name" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>Last Name</p><br>
+							<input type="text" name="Last_Name" required>
+						</td>
+					</tr>
 					<tr>
 						<td>
 							<p>Password</p><br>
