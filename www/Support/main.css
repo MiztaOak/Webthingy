@@ -88,12 +88,19 @@ nav p{
 nav a{
 	color:white;
 	text-decoration:none;
-	margin:5px;
 	font-size:25px;
 	font-weight:bold;
-	margin-left:40px;
 }
-nav a:hover{
+.knapp{
+	width: 22%;
+	height: 40px;
+	padding:10px;
+	min-width: 315px;
+	margin-top: -10px;
+	float:left;
+	text-align: center;
+}
+nav .knapp:hover{
 	background-color:#14E1F7;
 }
 header p{
@@ -135,4 +142,18 @@ form{
 	margin-left: 20px;
 	margin-right: 20px;	
 	color: white;
+}
+
+.ticket{
+	background-color:#14E1F7;
+	width: 30%;
+	border-radius: 20px;
+	text-align: center;
+	height: 500px;
+	margin-top: 20px;
+	margin-left: 34%
+}
+
+.table_ticket{
+	margin-left: 25%;
 }

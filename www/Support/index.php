@@ -1,7 +1,13 @@
 <?php
-
+	session_start();
 	$page =@$_GET['page'];
-
+	if(isset($_SESSION['support_msg'])){
+		$message = $_SESSION['support_msg'];
+		echo "<SCRIPT>
+		alert('$message');
+		</SCRIPT>";
+		unset($_SESSION['support_msg']);
+	}
 ?>
 
 <!DOCTYPE html>

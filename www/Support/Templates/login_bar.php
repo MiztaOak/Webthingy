@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	if (!@$_SESSION['loggedIn']) {
 		echo '<p> <a href="index.php?page=Form">Register</a> <a href="index.php?page=login">Login</a> </p> ';
 	}

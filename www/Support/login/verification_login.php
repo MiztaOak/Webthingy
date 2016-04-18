@@ -23,6 +23,7 @@ else if($username['Username'] === $_POST['Username']){
 	$_SESSION['loggedIn'] = TRUE;
 	$_SESSION['timeout'] = time();
 	$_SESSION['name'] = $_POST['Username'];
+	$_SESSION['User_ID'] = $username['ID1'];
 	header('Location: ../index.php');
 }
 
