@@ -169,3 +169,13 @@ form{
 	width: 	250px;
 	height: 100px;	
 }
+
+.ticket_box{
+	background-color: purple;
+	margin: 20px;
+	padding: 10px;
+	border-radius: 15px;
+	width: 200px;
+	height: 250px;
+	float: left;
+}

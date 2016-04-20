@@ -8,7 +8,7 @@ if (!isset($_POST['Username']) AND !isset($_POST['Password'])) {
 
 require_once('../../../MySQL_Connect/mysql_connect_support.php');
 
-$query = 'SELECT u.Username,u.User_ID AS ID1,p.User_ID AS ID2, p.Password FROM Users As u JOIN Password AS p ON p.Password=PASSWORD("' . $_POST['Password'] . '") AND u.Username="' . $_POST['Username'] . '";';
+$query = 'SELECT u.Email,u.Username,u.User_ID AS ID1,p.User_ID AS ID2, p.Password FROM Users As u JOIN Password AS p ON p.Password=PASSWORD("' . $_POST['Password'] . '") AND u.Email="' . $_POST['Username'] . '";';
 
 $result = mysqli_query($dbc,$query);
 
@@ -20,10 +20,10 @@ if ($username['ID1'] !== $username['ID2']) {
 	header('Location: ../index.php?page=login');
 }
 
-else if($username['Username'] === $_POST['Username']){
+else if($username['Email'] === $_POST['Username']){
 	$_SESSION['loggedIn'] = TRUE;
 	$_SESSION['timeout'] = time();
-	$_SESSION['name'] = $_POST['Username'];
+	$_SESSION['name'] = $username['Username'];
 	$_SESSION['User_ID'] = $username['ID1'];
 	header('Location: ../index.php');
 }
