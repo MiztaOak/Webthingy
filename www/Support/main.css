@@ -20,6 +20,13 @@ header {
 	border-bottom:2px solid white;
 }
 
+.logo{
+	height: 100px;
+	width: 100px;
+	margin-top: 15px;
+	margin-left: 30%; 
+}
+
 #header{
 	position:absolute;
 	float:left;
@@ -175,7 +182,17 @@ form{
 	margin: 20px;
 	padding: 10px;
 	border-radius: 15px;
-	width: 200px;
-	height: 250px;
+	width: 250px;
+	height: 100%;
+	min-height: 250px;
 	float: left;
+	text-align: center;
+}
+
+.text_area{
+	background-color: white;
+	margin:10px;
+	padding: 1px;
+	border-radius: 5px;
+	min-height: 25px;
 }

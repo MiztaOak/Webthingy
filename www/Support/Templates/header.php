@@ -1,1 +1,1 @@
-<h1 id="header">Support</h1>
+<h1 id="header">Walrus Support</h1><img class="logo" src="Images/walrus_logo.png">
