@@ -16,6 +16,7 @@ $username = mysqli_fetch_array($result);
 
 if ($username['ID1'] !== $username['ID2']) {
 	$_SESSION['loggedIn'] = FALSE;
+	$_SESSION['support_msg'] = "You have entered the wrong username and/or password";
 	header('Location: ../index.php?page=login');
 }
 
@@ -29,6 +30,7 @@ else if($username['Username'] === $_POST['Username']){
 
 else{
 	$_SESSION['loggedIn'] = FALSE;
+	$_SESSION['support_msg'] = "You have entered the wrong username and/or password";
 	header('Location: ../index.php?page=login');
 }
 

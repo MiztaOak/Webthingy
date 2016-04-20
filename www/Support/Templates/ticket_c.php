@@ -49,14 +49,14 @@
 			<tr>
 				<td>
 					<p>Short Description</p><br>
-					<textarea name="Short_Desc" form="ticket" required></textarea>
+					<textarea class="short_desc" name="Short_Desc" form="ticket" required></textarea>
 				</td>
 			</tr>
 
 			<tr>
 				<td>
 					<p>Description</p>
-					<textarea name="Description" form="ticket" required></textarea>
+					<textarea  class="desc" name="Description" form="ticket" required></textarea>
 				</td>
 			</tr>
 

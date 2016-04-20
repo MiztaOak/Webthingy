@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 require_once('../../../mysql_connect/mysql_connect_support.php');
 
@@ -15,6 +15,7 @@ $email = mysqli_fetch_array($result);
 $query= 'INSERT INTO password(User_ID,Password) VALUES("' . $email['User_ID'] . '",PASSWORD("' .$_POST['Password'] . '"));';
 
 mysqli_query($dbc,$query);
+$_SESSION['support_msg'] = "Your account has been created, please login to access the account";
 header('Location: ../index.php?page=login');
 
 ?>
