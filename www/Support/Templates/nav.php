@@ -5,5 +5,5 @@
 
 	<a href="index.php?page=ticket_view"><div class="knapp">View your ticket/chat</div></a>
 
-	<a href="index.php?page=chat_index"><div class="knapp">Admin mode</div></a>
+	<a href="admin/admin_mode.php"><div class="knapp">Admin mode</div></a>
 </p>

@@ -8,13 +8,25 @@
 		</SCRIPT>";
 		unset($_SESSION['support_msg']);
 	}
+
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Support</title>
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<?php
+		if (isset($_SESSION['a_mode']))	 {
+			?>
+			<link rel="stylesheet" type="text/css" href="a_main.css">
+			<?php
+		}
+		else{
+			?>
+			<link rel="stylesheet" type="text/css" href="main.css">
+			<?php
+		}
+		?>
 		<link rel="shortcut icon" href="templates/favicon.ico" type="image/x-icon" />
 		<meta charset="UTF-8">
 	</head>
@@ -24,11 +36,9 @@
 		<header>
 			<?php include('templates/header.php'); ?>
 		</header>
-
 		<nav>
 			<?php include('templates/nav.php'); ?>
 		</nav>
-		
 		<div id="login_bar">
 			<?php include('templates/login_bar.php'); ?>
 		</div>
@@ -53,7 +63,6 @@
 		<footer>
 			<?php include('templates/footer.php'); ?>
 		</footer>
-
 		</div>
 	</body>
 </html>
