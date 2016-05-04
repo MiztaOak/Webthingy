@@ -18,7 +18,7 @@
 		<?php
 		if (isset($_SESSION['a_mode']))	 {
 			?>
-			<link rel="stylesheet" type="text/css" href="a_main.css">
+			<link rel="stylesheet" type="text/css" href="Admin/a_main.css">
 			<?php
 		}
 		else{
@@ -47,15 +47,24 @@
 		<main>
 			
 			<?php
+				if(isset($_SESSION['a_mode'])){
+					if (!empty($page)) {
+						require("/Admin/$page.php");
+					}
 
-				if (!empty($page)) {
-					require("/templates/$page.php");
+					else{
+						require("/templates/index.php");
+					}
 				}
-
 				else{
-					require("/templates/index.php");
-				}
+					if (!empty($page)) {
+						require("/templates/$page.php");
+					}
 
+					else{
+						require("/templates/index.php");
+					}
+				}
 			?>
 
 		</main>

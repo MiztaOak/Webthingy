@@ -163,6 +163,18 @@ form{
 	font-family: Helvetica, sans-serif;
 }
 
+.product{
+	background-color: purple;
+	margin: 20px;
+	padding: 10px;
+	border-radius: 15px;
+	width: 250px;
+	height: 100%;
+	min-height: 250px;
+	float: right;
+	text-align: center;
+}
+
 .table_ticket{
 	margin-left: 20%;
 }
