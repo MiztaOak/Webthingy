@@ -32,46 +32,42 @@
 	</head>
 	<body>
 		<div id="wrapper">
+			<header>
+				<?php include('templates/header.php'); ?>
+			</header>
+			<nav>
+				<?php include('templates/nav.php'); ?>
+			</nav>
+			<div id="login_bar">
+				<?php include('templates/login_bar.php'); ?>
+			</div>
+			<br>
+			<br>
+			<main>		
+				<?php
+					if(isset($_SESSION['a_mode'])){
+						if (!empty($page)) {
+							require("/Admin/$page.php");
+						}
 
-		<header>
-			<?php include('templates/header.php'); ?>
-		</header>
-		<nav>
-			<?php include('templates/nav.php'); ?>
-		</nav>
-		<div id="login_bar">
-			<?php include('templates/login_bar.php'); ?>
-		</div>
-		<br>
-		<br>
-		<main>
-			
-			<?php
-				if(isset($_SESSION['a_mode'])){
-					if (!empty($page)) {
-						require("/Admin/$page.php");
+						else{
+							require("/templates/index.php");
+						}
 					}
-
 					else{
-						require("/templates/index.php");
-					}
-				}
-				else{
-					if (!empty($page)) {
-						require("/templates/$page.php");
-					}
+						if (!empty($page)) {
+							require("/templates/$page.php");
+						}
 
-					else{
-						require("/templates/index.php");
+						else{
+							require("/templates/index.php");
+						}
 					}
-				}
-			?>
-
-		</main>
-
-		<footer>
-			<?php include('templates/footer.php'); ?>
-		</footer>
+				?>
+			</main>
+			<footer>
+				<?php include('templates/footer.php'); ?>
+			</footer>
 		</div>
 	</body>
 </html>

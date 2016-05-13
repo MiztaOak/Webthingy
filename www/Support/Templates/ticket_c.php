@@ -8,7 +8,6 @@
 
 <div class="ticket">
 	<table class="table_ticket">
-
 		<form action="Skickad_data_ac/ticket.php" method="POST" id="ticket">
 
 			<tr>
@@ -65,9 +64,6 @@
 					<input type="submit" name="Submit" value="Submit">
 				</td>
 			</tr>
-
 		</form>
-
-
 	</table>
-</div
+</div>

@@ -8,7 +8,7 @@ require_once('../../mysql_connect/mysql_connect_support.php');
 $query = 'SELECT * FROM Ticket WHERE User_ID=("' . $_SESSION['User_ID'] . '");';
 
 $result = mysqli_query($dbc,$query);
-
+echo '<div class="ticket_holder">';
 while($tickets = mysqli_fetch_array($result)){
 	$query = 'SELECT Product_Name FROM Products WHERE Product_ID=("' . $tickets['Product_ID'] . '");';
 	$result2 = mysqli_query($dbc,$query);
@@ -37,15 +37,16 @@ while($tickets = mysqli_fetch_array($result)){
 			break;
 	}
 	echo '
-			<div class="ticket_box">';
-	echo'		<div class="text_area"><p>Title: ' . $tickets['Ticket_Title'] . '</p></div>
-				<div class="text_area"><p>Product: ' . $Product['Product_Name'] . '</p></div>
-				<div class="text_area"><p>Ticket type: ' . $type . '</p></div>
-				<div class="text_area"><p>Short description: ' . $tickets['Ticket_Short_Desc'] . '</p></div>
-				<div class="text_area"><p>Description: ' . $tickets['Ticket_Description'] . '</p></div>
-				<div class="text_area"><p>Creation date: ' . $tickets['Creation_Date'] . '</p></div>';
-	echo'	</div>';
-
+			<div class="ticket_box">
+			<div class="text_area"><p>Title: ' . $tickets['Ticket_Title'] . '</p></div>
+			<div class="text_area"><p>Product: ' . $Product['Product_Name'] . '</p></div>
+			<div class="text_area"><p>Ticket type: ' . $type . '</p></div>
+			<div class="text_area"><p>Short description: ' . $tickets['Ticket_Short_Desc'] . '</p></div>
+			<div class="text_area"><p>Description: ' . $tickets['Ticket_Description'] . '</p></div>
+			<div class="text_area"><p>Creation date: ' . $tickets['Creation_Date'] . '</p></div>
+			<a href=index.php?page=ticket_resp_view&id=' . $tickets['Ticket_Key'] . '>
+			<button>Respond</button> </a>
+			</div>';
 }
-
+echo "</div>";
 ?>
