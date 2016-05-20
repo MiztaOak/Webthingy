@@ -32,4 +32,5 @@ $_SESSION['support_msg'] = "Your account has been created, please login to acces
 header('Location: ../index.php?page=login');
 
 }
+
 ?>

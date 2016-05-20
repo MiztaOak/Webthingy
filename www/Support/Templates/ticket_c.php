@@ -12,15 +12,15 @@
 
 			<tr>
 				<td>
-					<p>Ticket Title</p><br>
-					<input type="text" name="Ticket_Title" required>
+					<br>
+					<input type="text" name="Ticket_Title" placeholder="Ticket Title" required>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p>Ticket type</p>
+					<br>
 					<select name="ticket_type" required>
-						<option selected>Type</option>
+						<option selected>Ticket Type</option>
 						<option value="1">Login errror</option>
 						<option value="2">Bug</option>
 						<option value="3">Payment error</option>
@@ -32,9 +32,9 @@
 			</tr>
 			<tr>
 				<td>
-					<p>Product</p>
+					<br>
 					<select name="Product" required>
-						<option selected>Games</option>
+						<option selected>Product</option>
 						<option value="1">White Alpine</option>
 						<option value="2">Clan Battles 2</option>
 						<option value="3">Galaxy of Peacecraft</option>
@@ -47,20 +47,21 @@
 			</tr>
 			<tr>
 				<td>
-					<p>Short Description</p><br>
-					<textarea class="short_desc" name="Short_Desc" form="ticket" required></textarea>
+					<br>
+					<textarea class="short_desc" name="Short_Desc" form="ticket" placeholder="Short Description" required></textarea>
 				</td>
 			</tr>
 
 			<tr>
 				<td>
-					<p>Description</p>
-					<textarea  class="desc" name="Description" form="ticket" required></textarea>
+					<br>
+					<textarea  class="desc" name="Description" form="ticket" placeholder="Description" required></textarea>
 				</td>
 			</tr>
 
 			<tr>
 				<td>
+					<br>
 					<input type="submit" name="Submit" value="Submit">
 				</td>
 			</tr>

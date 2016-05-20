@@ -27,6 +27,7 @@
 			<?php
 		}
 		?>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<link rel="shortcut icon" href="templates/favicon.ico" type="image/x-icon" />
 		<meta charset="UTF-8">
 	</head>
@@ -51,7 +52,7 @@
 						}
 
 						else{
-							require("/templates/index.php");
+							require("/Admin/a_index.php");
 						}
 					}
 					else{
