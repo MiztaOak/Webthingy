@@ -14,9 +14,6 @@ if(@$_SESSION['timeout']+ 60*30 < time()){
 	$_SESSION['timeout'] = time();
 }
 
-
-//echo $meddelande;
-
 ?>
 
 <!DOCTYPE <!DOCTYPE html>
@@ -28,11 +25,11 @@ if(@$_SESSION['timeout']+ 60*30 < time()){
 	      $('.fadein :first-child').fadeOut()
 	         .next('img').fadeIn()
 	         .end().appendTo('.fadein');}, 
-	      3000);
+	      3500);
 		});
 	</script>
 	<title>Login</title>
-</head
+</head>
 <body>
 	<br>
 	<div class="fadein">
@@ -44,7 +41,5 @@ if(@$_SESSION['timeout']+ 60*30 < time()){
 	  <img class="slide_img" src="Images/hearth.jpg">
 	  <img class="slide_img" src="Images/spirit.jpg">
 	</div>
-
-	<br>
 </body>
 </html>

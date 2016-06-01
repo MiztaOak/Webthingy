@@ -1,5 +1,5 @@
 <?php
-	require_once('../mysql_connect/mysql_connect_webgoaty.php');
+	/*require_once('../mysql_connect/mysql_connect_webgoaty.php');
 
 	$query = 'SELECT * FROM Cities WHERE Population>5000000 ORDER BY Population DESC';
 
@@ -87,6 +87,6 @@
 			echo '<tr><td>' . ucfirst($rad2['Countryname']) . '</td> <td>' . ucfirst($rad['City']) . '</td> <td>' . $rad['Population'] . '</td> </tr>';
 		}
 
-	echo '</table>';
-
+	echo '</table>';*/
+	header('Location: support/index.php');
 ?>

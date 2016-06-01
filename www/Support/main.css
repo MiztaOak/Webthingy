@@ -13,7 +13,7 @@ body {
 header {
 	background: #3460df;
 	padding:10px;
-	min-width:1300px;
+
 	height:90px;
 	border-bottom:2px solid white;
 }
@@ -34,7 +34,7 @@ header {
 	font-size:45px;
 	width:100%;
 	font-weight:bold;
-	min-width:1300px;
+
 	color:white;
 }
 #name{
@@ -46,7 +46,7 @@ header {
 	font-size:15px;
 }
 main{
-	min-width:1300px;
+
 	height:auto;
 	min-height: 500px;
 	padding-bottom:65px; /* Height of the footer element */
@@ -59,7 +59,7 @@ footer {
 	height:20px;
 	bottom:0;
 	left:0;
-	min-width:1300px;
+
 	border-top:2px solid black;
 }
 footer p{
@@ -80,7 +80,7 @@ nav{
 	border-bottom:2px solid white;
 	background:#4973cb;
 	padding:10px;
-	min-width:1300px;
+
 	height:40px;
 }
 nav p{
@@ -149,11 +149,11 @@ form{
 }
 
 .ticket{
-	background-color:#14E1F7;
+	border: 5px solid blue;
+	background-color: #DEE2E3;
 	width: 30%;
 	border-radius: 20px;
 	text-align: center;
-	height: 600px;
 	margin-top: 20px;
 	margin-left: 34%;
 	font-family: Helvetica, sans-serif;
@@ -184,7 +184,8 @@ form{
 
 .ticket_box{
 	display: inline-block;
-	background-color: purple;
+	border: 5px solid blue;
+	background-color: grey;
 	margin: 20px;
 	padding: 10px;
 	border-radius: 15px;
@@ -197,7 +198,8 @@ form{
 
 .Replie_box{
 	display: inline-block;
-	background-color: purple;
+	border: 5px solid blue;
+	background-color: grey;
 	margin: 20px;
 	margin-top: 40px;
 	padding: 10px;
@@ -304,10 +306,20 @@ button{
 }
 
 .slide_img{
+	border: solid blue 2px;
 	height: 90%;
 	width: 90%;
 	min-height:540px; 
 	min-width:960px;
 	margin-left:40%;
 	margin-right:40%;
+}
+
+.Contact{
+	width: 33%;
+	margin-left: 33%;
+	margin-right: 33%;
+	margin-top: 5%;
+	padding: 2%;
+	border: 3px solid blue;
 }

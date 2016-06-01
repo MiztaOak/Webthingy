@@ -19,7 +19,7 @@
 
 		<a href="index.php?page=ticket_view"><div class="knapp">View your pending tickets</div></a>
 
-		<a href="admin/admin_mode.php"><div class="knapp">Admin mode</div></a>
+		<a href="admin/admin_mode.php"><div class="knapp">User mode</div></a>
 	</p>
 <?php
 }

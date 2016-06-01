@@ -50,21 +50,7 @@ echo '<div class="text_area"><p>Username: ' . $name['Username'] . ' </p></div>
 		<div class="text_area"><p>Description: ' . $tickets['Ticket_Description'] . '</p></div>
 		<div class="text_area"><p>Creation date: ' . $tickets['Creation_Date'] . '</p></div>
 		</div>';
-
-$query = 'SELECT * FROM Products WHERE Product_ID=("' . $tickets['Product_ID'] . '");';
-
-$result = mysqli_query($dbc,$query);
-
-$Product = mysqli_fetch_array($result);
-
-echo '<div class="product">
-	<div class="text_area"><p>Product: ' . $Product['Product_Name'] . ' </p></div>
-	<div class="text_area"><p>Price: ' . $Product['Product_Price'] . ' $</p></div>
-	<div class="text_area"><p>Product warranty: ' . $Product['Product_warranty'] . '</p></div>
-	<div class="text_area"><p>Product description: ' . $Product['Product_Desc'] . '</p></div>
-	</div>';
 ?>
-
 <div class="ticket">
 	<table class="table_ticket">
 
@@ -72,8 +58,8 @@ echo '<div class="product">
 
 			<tr>
 				<td>
-					<p>Respons Title</p><br>
-					<input type="text" name="Resp_Title" required>
+					<br>
+					<input type="text" name="Resp_Title" placeholder="Respons Title" required>
 				</td>
 			</tr>
 			<tr>
@@ -88,8 +74,8 @@ echo '<div class="product">
 			</tr>
 			<tr>
 				<td>
-					<p>Description</p>
-					<textarea  class="desc" name="Description" form="ticket" required></textarea>
+					<br>
+					<textarea  class="desc" name="Description" form="ticket" placeholder="Description" required></textarea>
 				</td>
 			</tr>
 			<tr>
@@ -103,3 +89,19 @@ echo '<div class="product">
 
 	</table>
 </div>
+
+<?php
+$query = 'SELECT * FROM Products WHERE Product_ID=("' . $tickets['Product_ID'] . '");';
+
+$result = mysqli_query($dbc,$query);
+
+$Product = mysqli_fetch_array($result);
+
+echo '<div class="product">
+	<div class="text_area"><p>Product: ' . $Product['Product_Name'] . ' </p></div>
+	<div class="text_area"><p>Price: ' . $Product['Product_Price'] . ' $</p></div>
+	<div class="text_area"><p>Product warranty: ' . $Product['Product_warranty'] . '</p></div>
+	<div class="text_area"><p>Product description: ' . $Product['Product_Desc'] . '</p></div>
+	</div>';
+?>
+
