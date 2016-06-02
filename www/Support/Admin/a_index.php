@@ -32,5 +32,5 @@ while($ids = mysqli_fetch_array($result)){
 	<p>Amount of unanswered tickets: <?php echo $count; ?> </p>
 </div>
 
-<img src="login/Walrus.jpg">
+<img class="walrus" src="login/Walrus.jpg">
 <br>

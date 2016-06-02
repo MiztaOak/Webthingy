@@ -54,6 +54,11 @@ main{
 	min-height: 500px;
 	padding-bottom:65px; /* Height of the footer element */
 }
+
+.walrus{
+	margin-top: 2%;
+	margin-left: 33%;
+}
 /* Css för footern */
 footer {
 	padding:0px;
