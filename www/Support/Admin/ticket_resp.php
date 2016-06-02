@@ -1,6 +1,6 @@
 <?php
 
-$id =@$_GET['id'];
+$id =@$_GET['id']; //Ticket IDn som skickas från den förra sidan
 
 require_once('../../mysql_connect/mysql_connect_support.php');
 
@@ -10,8 +10,9 @@ $result = mysqli_query($dbc,$query);
 
 $tickets = mysqli_fetch_array($result);
 
-$_SESSION['Ticket'] = $tickets['Ticket_Key']; 
+$_SESSION['Ticket'] = $tickets['Ticket_Key']; //Skapar en sessions variable som används när responses ska sättas in i databasen 
 
+//Skriver ut Ticketen
 $query = 'SELECT Product_Name FROM Products WHERE Product_ID=("' . $tickets['Product_ID'] . '");';
 $result2 = mysqli_query($dbc,$query);
 $Product = mysqli_fetch_array($result2);
@@ -51,6 +52,8 @@ echo '<div class="text_area"><p>Username: ' . $name['Username'] . ' </p></div>
 		<div class="text_area"><p>Creation date: ' . $tickets['Creation_Date'] . '</p></div>
 		</div>';
 ?>
+
+<!-- Ett form där man skriver in responsen -->
 <div class="ticket">
 	<table class="table_ticket">
 
@@ -91,6 +94,8 @@ echo '<div class="text_area"><p>Username: ' . $name['Username'] . ' </p></div>
 </div>
 
 <?php
+
+//Skriver ut all information om produkten som ticketen berör
 $query = 'SELECT * FROM Products WHERE Product_ID=("' . $tickets['Product_ID'] . '");';
 
 $result = mysqli_query($dbc,$query);

@@ -2,11 +2,12 @@
 
 session_start();
 
-
-	if (!isset($_POST['Username']) AND !isset($_POST['Password'])) {
+//Kontrolerar så att användaren har mattat inte ett lösenord och en email
+if (!isset($_POST['Username']) AND !isset($_POST['Password'])) {
 	header('Location: ../index.php?page=login');
 }
 
+//Inlogning funktionen för admins
 require_once('../../../MySQL_Connect/mysql_connect_support.php');
 
 $query = 'SELECT Admin_Email,Admin_Name,Admin_ID FROM Admin WHERE Admin_Email="' . $_POST['Username'] . '";';
@@ -28,6 +29,7 @@ while ($password = mysqli_fetch_array($result)) {
 	}
 }
 
+//Ifall du inte få statusen LogggedIn så skickas du tillbacka till inlognings sidan annars skickas du till start sidan
 if (!$_SESSION['loggedIn']) {
 	$_SESSION['loggedIn'] = FALSE;
 	$_SESSION['support_msg'] = "You have entered the wrong username and/or password";

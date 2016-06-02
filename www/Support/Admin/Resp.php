@@ -1,5 +1,7 @@
 <?php
 
+
+//sätter in responsen till en ticket i databasen, $_SESSION['Ticket'] kommer från ticket_resp.php
 session_start();
 
 require_once('../../../mysql_connect/mysql_connect_support.php');

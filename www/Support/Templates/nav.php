@@ -1,4 +1,5 @@
 <?php
+//Navbar som visar olika saker baserat på ifall admin mode är på eller inte
 		if(!isset($_SESSION['a_mode'])){
 ?>
 	<p> 

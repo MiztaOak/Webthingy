@@ -1,19 +1,14 @@
 <?php
-/*session_start();*/
 
-if(!@$_SESSION['loggedIn']){
-	/*header('Location: index.php?page=login');*/
-}
 if(@$_SESSION['timeout']+ 60*30 < time()){
 	session_destroy();
 	session_unset();
-	/*$meddelande = 'hej då';*/
-}else{
-	/*$meddelande = 'hej';*/
+}
+else{
 	$_SESSION['timeout'] = time();
 }
 require_once('../../mysql_connect/mysql_connect_support.php');
-
+//Räknar hur många tickets som inte har statusen "completed"
 $query = 'SELECT * FROM Ticket;';
 $result = mysqli_query($dbc,$query);
 $i = 0;
@@ -32,7 +27,7 @@ while($ids = mysqli_fetch_array($result)){
 	$i = 0;
 }
 ?>
-
+<!-- Skriver ut resultatet av $count -->
 <div class="ticket_amount">
 	<p>Amount of unanswered tickets: <?php echo $count; ?> </p>
 </div>

@@ -1,13 +1,4 @@
-<?php
-	/*session_start(); 
-
- 	if(@$_SESSION['loggedIn']){ 
- 	header('Location: templates/index.php');
- }
-*/
-?>
-
-
+<!-- Formulär som tillåter användaren att logga in -->
 <div class="login">
 	<h3>Login</h3>
 	<table>

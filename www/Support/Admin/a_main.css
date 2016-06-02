@@ -1,5 +1,4 @@
-html,
-
+/* Css för Body */
 body {
 	margin:0;
 	padding:0;
@@ -12,6 +11,7 @@ body {
 	min-height:100%;
 	position:relative;
 }
+/* Css för headern */
 header {
 	background: red;
 	padding:10px;
@@ -39,14 +39,14 @@ header {
 	min-width:1300px;
 	color:white;
 }
-#name{
-	padding:0px;
-	padding-top:20px;
-	height:20px;
-	float:left;
-	width:200px;
-	font-size:15px;
+header p{
+	margin:0px;
+	padding:5px;
+	text-align:center;
+	color:black;
+	font-size:30px;
 }
+/* Css för main */
 main{
 	
 	min-width:1300px;
@@ -54,6 +54,7 @@ main{
 	min-height: 500px;
 	padding-bottom:65px; /* Height of the footer element */
 }
+/* Css för footern */
 footer {
 	padding:0px;
 	padding-top:8px;
@@ -79,6 +80,7 @@ footer a{
 footer span{
 	margin:0px auto;
 }
+/* Css för navbaren */
 nav{
 	border-bottom:2px solid white;
 	background:#C41212;
@@ -111,23 +113,7 @@ nav a{
 nav .knapp:hover{
 	background-color:#F71616;
 }
-header p{
-	margin:0px;
-	padding:5px;
-	text-align:center;
-	color:black;
-	font-size:30px;
-}
-
-textarea {
-   resize: none;
-}
-
-form{
-	margin:0px auto;
-	width:300px;
-}
-
+/* Css för loginbar */
 #login_bar{
 	position:absolute;
 	float:right;
@@ -151,7 +137,10 @@ form{
 	margin-right: 20px;	
 	color: white;
 }
-
+button{
+	border-radius: 4px;
+}
+/* Css för ticket delen */
 .ticket{
 	display: inline-block;
 	border: 5px solid red;
@@ -163,21 +152,6 @@ form{
 	text-align: center;
 	font-family: Helvetica, sans-serif;
 }
-
-.product{
-	display: inline-block;
-	border: 5px solid red;
-	background-color: grey;
-	margin: 20px;
-	padding: 10px;
-	border-radius: 15px;
-	width: 250px;
-	height: 100%;
-	min-height: 250px;
-	text-align: center;
-	margin-left: 5%;
-}
-
 .table_ticket{
 	margin-left: 20%;
 }
@@ -191,7 +165,14 @@ form{
 	width: 	250px;
 	height: 100px;	
 }
+textarea {
+   resize: none;
+}
 
+form{
+	margin:0px auto;
+	width:300px;
+}
 .ticket_box{
 	display: inline-block;
 	border: 5px solid red;
@@ -213,19 +194,30 @@ form{
 	border-radius: 5px;
 	min-height: 25px;
 }
-
+/* Css för produkter */
+.product{
+	display: inline-block;
+	border: 5px solid red;
+	background-color: grey;
+	margin: 20px;
+	padding: 10px;
+	border-radius: 15px;
+	width: 250px;
+	height: 100%;
+	min-height: 250px;
+	text-align: center;
+	margin-left: 5%;
+}
+/* Css för delen på startsidan som räknar hur många tickets det finns som behöver besvaras */
 .ticket_amount{
 	float: right;
-	background-color: red;
+	border: 5px solid red;
+	background-color: #DEE2E3;
 	border-radius: 10px;
 	margin: 20px;
 	padding: 10px;
 }
-
-button{
-	border-radius: 4px;
-}
-
+/* Css för login */
 .login{
 	border: 5px solid red;
 	background-color: #DEE2E3;
@@ -255,20 +247,12 @@ button{
 	background-color: red;
 	color: white;
 }
-
-.create_button{
-	width: 50%;
-	margin-right: 25%;
-	margin-left: 25%;
-	background-color: red;
-	color: white;	
-}
-
+/* Css för Contact delen */
 .Contact{
 	width: 33%;
 	margin-left: 33%;
 	margin-right: 33%;
 	margin-top: 5%;
 	padding: 2%;
-	border: 3px solid blue;
+	border: 3px solid red;
 }

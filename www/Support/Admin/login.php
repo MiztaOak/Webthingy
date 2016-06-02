@@ -1,13 +1,5 @@
-<?php
-	/*session_start(); 
 
- 	if(@$_SESSION['loggedIn']){ 
- 	header('Location: templates/index.php');
- }
-*/
-?>
-
-
+<!-- Formuläret för att logga in som en admin -->
 <div class="login">
 	<h3>Admin Login</h3>
 	<table>
@@ -37,8 +29,5 @@
 		</form>
 
 	</table>
-	<br>
-	<a href=index.php?page=Form>
-			<button class="create_button">Create a account</button>
-	</a>
+	<br> 	
 </div>

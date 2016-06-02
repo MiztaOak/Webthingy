@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$page =@$_GET['page'];
+	//skriver ut ett popup medelande ifall det finns ett att skriva ut
 	if(isset($_SESSION['support_msg'])){
 		$message = $_SESSION['support_msg'];
 		echo "<SCRIPT>
@@ -16,6 +17,7 @@
 	<head>
 		<title>Support</title>
 		<?php
+		//Laddar olika css filer baserat på ifall admin mode är på eller inte
 		if (isset($_SESSION['a_mode']))	 {
 			?>
 			<link rel="stylesheet" type="text/css" href="Admin/a_main.css">
@@ -27,7 +29,7 @@
 			<?php
 		}
 		?>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> <!-- Hämtar jquery -->
 		<link rel="shortcut icon" href="templates/favicon.ico" type="image/x-icon" />
 		<meta charset="UTF-8">
 	</head>
@@ -44,8 +46,10 @@
 			</div>
 			<br>
 			<br>
+			<!-- Main delen av sidan som är det ända som ändras på sidan, använder sig av $page variabeln för att läsa in rätt fil -->
 			<main>		
 				<?php
+					//ifall man har admin mode på så tar den filer från mappen Admin annars så tar den filer från templates
 					if(isset($_SESSION['a_mode'])){
 						if (!empty($page)) {
 							require("/Admin/$page.php");

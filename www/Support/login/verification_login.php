@@ -2,11 +2,11 @@
 
 session_start();
 
-
+//Kontrolerar så att användaren har mattat inte ett lösenord och en email
 if (!isset($_POST['Username']) AND !isset($_POST['Password'])) {
 	header('Location: ../index.php?page=login');
 }
-
+//Inlogning funktionen
 require_once('../../../MySQL_Connect/mysql_connect_support.php');
 
 $query = 'SELECT Email,Username,User_ID FROM Users WHERE Email="' . $_POST['Username'] . '";';
@@ -27,7 +27,7 @@ while ($password = mysqli_fetch_array($result)) {
 		$_SESSION['User_ID'] = $username['User_ID'];
 	}
 }
-
+//Ifall du inte få statusen LogggedIn så skickas du tillbacka till inlognings sidan annars skickas du till start sidan
 if (!$_SESSION['loggedIn']) {
 	$_SESSION['loggedIn'] = FALSE;
 	$_SESSION['support_msg'] = "You have entered the wrong username and/or password";

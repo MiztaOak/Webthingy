@@ -2,7 +2,7 @@
  	if(@!$_SESSION['loggedIn']){ 
  	header('Location: index.php?page=login');
 }
-
+//Skriver ut all tickets som en användare har skapat
 require_once('../../mysql_connect/mysql_connect_support.php');
 
 $query = 'SELECT * FROM Ticket WHERE User_ID=("' . $_SESSION['User_ID'] . '");';
@@ -44,9 +44,9 @@ while($tickets = mysqli_fetch_array($result)){
 			<div class="text_area"><p>Short description: ' . $tickets['Ticket_Short_Desc'] . '</p></div>
 			<div class="text_area"><p>Description: ' . $tickets['Ticket_Description'] . '</p></div>
 			<div class="text_area"><p>Creation date: ' . $tickets['Creation_Date'] . '</p></div>
-			<a href=index.php?page=ticket_resp_view&id=' . $tickets['Ticket_Key'] . '>
+			<a href=index.php?page=ticket_resp_view&id=' . $tickets['Ticket_Key'] . '> 
 			<button>Respond</button> </a>
-			</div>';
+			</div>'; 
 }
 echo "</div>";
 ?>

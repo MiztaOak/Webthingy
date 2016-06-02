@@ -1,5 +1,6 @@
 <?php
-	$id =@$_GET['id'];
+	$id =@$_GET['id']; //tar emot ticket_key från förra sidan
+	//Visar alla repliese som finns för den ticketen som har valts
 	require_once('../../mysql_connect/mysql_connect_support.php');
 	$query = 'SELECT * FROM Replies WHERE Ticket_Key =("' . $id . '") ORDER BY Creation_Date ASC;';
 	$result = mysqli_query($dbc,$query);
@@ -27,6 +28,7 @@
 			</div>';
 		}
 	}
+	//ifall det inte finns någon ticket att visa så visar sidan istället följande medelande
 	else{
 		echo '<div class="Replie_box"> <p class="text_area">Sorry there is no replie to this ticket at the moment our walrus supporters are currently working on your ticket and will send you a respons as soon as possible</p></div>';
 	}

@@ -5,7 +5,7 @@
  }
 
 ?>
-
+<!-- Formulär som skapar en ticket -->
 <div class="ticket">
 	<table class="table_ticket">
 		<form action="Skickad_data_ac/ticket.php" method="POST" id="ticket">

@@ -5,15 +5,15 @@
 
 require_once('../../mysql_connect/mysql_connect_support.php');
 
-$query = 'SELECT * FROM Ticket ORDER BY Creation_Date Desc;';
+$query = 'SELECT * FROM Ticket ORDER BY Creation_Date Desc;'; //importerar alla tickets
 
 $result = mysqli_query($dbc,$query);
 
 while($tickets = mysqli_fetch_array($result)){
-	$query2 = 'SELECT * FROM Replies WHERE Ticket_Key=("' . $tickets['Ticket_Key'] .'") AND Ticke_Status="2";';
+	$query2 = 'SELECT * FROM Replies WHERE Ticket_Key=("' . $tickets['Ticket_Key'] .'") AND Ticke_Status="2";'; //kontrolerar ifall ticketen har fått status=2 vilket betydera att den är compelted
 	$result2 = mysqli_query($dbc,$query2);
 	$status = mysqli_fetch_array($result2);
-	if(!$status){
+	if(!$status){ //ifall ticketet inte har status=2 så skrivs den ut
 		$query = 'SELECT Product_Name FROM Products WHERE Product_ID=("' . $tickets['Product_ID'] . '");';
 		$result2 = mysqli_query($dbc,$query);
 		$Product = mysqli_fetch_array($result2);
