@@ -1,4 +1,4 @@
-/* Css för Body */
+﻿/* Css för Body */
 body {
 	margin:0;
 	padding:0;
@@ -21,10 +21,10 @@ header {
 }
 
 .logo{
-	height: 100px;
-	width: 100px;
+	height: 90%;
+	width: 8%;
 	margin-top: 10px;
-	margin-left: 30%; 
+	margin-left: 27%; 
 }
 
 #header{
@@ -48,9 +48,6 @@ header p{
 }
 /* Css för main */
 main{
-
-	height:auto;
-	min-height: 500px;
 	padding-bottom:65px; /* Height of the footer element */
 }
 /* Css för footer */
@@ -120,7 +117,6 @@ nav .knapp:hover{
 	font-size:20px;
 	width:100%;
 	font-weight:bold;
-	min-width:1300px;
 	color:white;
 	background-color:#000066; 
 }
@@ -153,18 +149,17 @@ nav .knapp:hover{
 }
 
 .short_desc{
-	width: 	250px;
+	width: 	95%;
 	height: 50px;
 }
 
 .desc{
-	width: 	250px;
+	width: 	95%;
 	height: 100px;	
 }
 
 .ticket_holder{
 	width: 100%;
-	min-width: 1300px;
 	height: 100%;
 	min-height: 1000px;
 	position: relative;
@@ -225,16 +220,21 @@ button{
 	margin-left: 40.5%;
 	margin-right: 40.5%;
 	margin-top: 4%;
-	padding: 2%;
 	border-radius: 10%;
 	width: 19%;
+	padding:1%;
 	text-align: center;
 }
 
+.register table{
+	margin-left: 10%;
+	width: 80%;
+	margin-right: 10%;
+}
 .register input{
-	margin-right: 23%;
-	margin-left: 23%;
-	height: 80%;
+	margin-right: 5%;
+	margin-left: 5%;
+	height: 90%;
 	padding-bottom: 2%;
 }
 
@@ -263,20 +263,24 @@ button{
 	margin-left: 40.5%;
 	margin-right: 40.5%;
 	margin-top: 4%;
-	padding: 2%;
 	border-radius: 10%;
 	width: 19%;
 	text-align: center;
+	padding: 1%;
 }
 
 .login input{
 	width: 90%;
-	margin-right: 30%;
-	margin-left: 30%;
+	margin-right: 5%;
+	margin-left: 5%;
 	height: 70%;
 	padding-bottom: 2%;	
 }
-
+.login table{
+	margin-left: 10%;
+	width: 80%;
+	margin-right: 10%;
+}
 .login_button{
 	width: 60%;
 	height: 100%;
@@ -296,20 +300,21 @@ button{
 }
 /* Css för slideshow */
 .fadein { 
-	position:relative; width:500px; height:332px; 
+	position:relative;  
+}
+.slideshow{
+	height: 475px;
 }
 .fadein img { 
-	position:absolute; left:0; top:0; 
-}
+ 	position:absolute;
+ 	left:0; 
+ 	top:0;
 
+}
 .slide_img{
 	border: solid blue 2px;
-	height: 90%;
-	width: 90%;
-	min-height:540px; 
-	min-width:960px;
-	margin-left:40%;
-	margin-right:40%;
+	width: 60%;
+	margin-left: 20%;
 }
 /* Css för Contact delen */
 .Contact{

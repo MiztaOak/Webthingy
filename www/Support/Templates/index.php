@@ -22,13 +22,15 @@ if(@$_SESSION['timeout']+ 60*30 < time()){
 
 
 <br>
-<!-- Slideshow -->
-<div class="fadein">
-  <img class="slide_img" src="Images/black.jpg">
-  <img class="slide_img" src="Images/guildwars.jpg">
-  <img class="slide_img" src="Images/wow.jpg">
-  <img class="slide_img" src="Images/hots.jpg">
-  <img class="slide_img" src="Images/over.jpg">
-  <img class="slide_img" src="Images/hearth.jpg">
-  <img class="slide_img" src="Images/spirit.jpg">
+<div class="slideshow">
+  <!-- Slideshow -->
+  <div class="fadein">
+    <img class="slide_img" src="Images/black.jpg">
+    <img class="slide_img" src="Images/guildwars.jpg">
+    <img class="slide_img" src="Images/wow.jpg">
+    <img class="slide_img" src="Images/hots.jpg">
+    <img class="slide_img" src="Images/over.jpg">
+    <img class="slide_img" src="Images/hearth.jpg">
+    <img class="slide_img" src="Images/spirit.jpg">
+  </div>
 </div>
