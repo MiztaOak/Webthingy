@@ -9,7 +9,7 @@ $query = 'INSERT INTO Ticket(User_ID,Ticket_Title,Ticket_Type,Product_ID,Ticket_
 mysqli_query($dbc,$query);
 
 unset($_SESSION['support_msg']);
-$_SESSION['support_msg'] = "Your ticket has been resived";
+$_SESSION['support_msg'] = "Your ticket has been received";
 
 header('Location: ../index.php');
 
